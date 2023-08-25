@@ -3,6 +3,8 @@ import mysql from "mysql";
 import cors from "cors";
 import e from "express"; 
 
+require("dotenv").config()
+
 const db = mysql.createConnection({
   host: "localhost",
   user: "niranjan",
@@ -103,7 +105,7 @@ app.post("/createpost", (req, res) => {
   });
 });
  
-app.listen(8000, () => {
+app.listen(process.env.PORT || 8000, () => {
   console.log("connected to the backend");
 });
 
