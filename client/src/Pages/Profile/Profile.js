@@ -67,7 +67,7 @@ const Profile = () => {
 
     fetchAllUsers();
     fetchAllPosts();
-  }, []);
+  }, [userId]);
 
   console.log(userInfo);
   // console.log(userInfo[0]?.username?.charAt(0).toUpperCase());
