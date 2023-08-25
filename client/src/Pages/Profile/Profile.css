@@ -1,0 +1,59 @@
+.profile {
+  display: flex;
+  width: 100%;
+  background-color: rgb(22, 26, 24);
+
+}
+.profileCont {
+  flex: 6;
+}
+
+.top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5%;
+}
+
+.card{
+    width: 100%;
+}
+
+.profile_desc{
+    display: flex;
+    flex-direction: column;
+}
+
+.desc_top{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.contactIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.mail{
+    background-color: rgba(241, 109, 92, 0.61);
+}
+.twitter{
+    background-color: rgba(115, 179, 209, 0.61);
+
+}
+.whatsapp{
+    background-color: rgba(122, 243, 106, 0.61);
+
+}
+.facebook{
+    background-color: rgba(54, 111, 216, 0.61);
+
+}
+
+.userPost:hover{
+    
+}
