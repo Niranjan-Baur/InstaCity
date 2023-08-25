@@ -29,13 +29,16 @@ const Profile = () => {
 
   const { userId } = useParams();
   const currUserId = sessionStorage.getItem("userID");
+  // const BASE_URL = "https://insta-city.onrender.com"
 
   console.log(userId);
+
+
 
   useEffect(() => {
     const fetchAllUsers = async () => {
       await axios
-        .get("http://localhost:8000/users")
+        .get("https://insta-city.onrender.com/users")
         .then((res) => {
           setUsers(res?.data);
           return res?.data;
@@ -50,7 +53,7 @@ const Profile = () => {
     };
     const fetchAllPosts = async () => {
       await axios
-        .get("http://localhost:8000/posts")
+        .get("https://insta-city.onrender.com/posts")
         .then((res) => {
           setPosts(res?.data);
           return res?.data;

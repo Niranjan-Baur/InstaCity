@@ -27,7 +27,7 @@ const Register = () => {
     e.preventDefault();
     setShowAni(true)
     await axios
-      .post("http://localhost:8000/register", user)
+      .post("https://insta-city.onrender.com/register", user)
       .then((res) => {
         console.log(res);
         // document.cookie = `email=${res?.data.data[0].email}`;
@@ -37,7 +37,7 @@ const Register = () => {
       .then(async () => {
         const { email, password } = user;
         await axios
-          .post("http://localhost:8000/login", { email, password })
+          .post("https://insta-city.onrender.com/login", { email, password })
           .then((res) => {
             sessionStorage.setItem("userID", res?.data.data[0].id);
             setTimeout(() => {

@@ -82,7 +82,7 @@ const CreatePost = () => {
           // console.log(userID);
 
           axios
-            .post("http://localhost:8000/createpost", {
+            .post("https://insta-city.onrender.com/createpost", {
               url,
               description,
               createdDate,

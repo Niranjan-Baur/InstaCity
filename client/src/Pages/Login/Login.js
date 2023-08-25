@@ -26,7 +26,7 @@ const Login = () => {
     e.preventDefault();
 
     await axios
-      .post("http://localhost:8000/login", user)
+      .post("https://insta-city.onrender.com/login", user)
       .then((res) => {
         // console.log(res?.data.message);
         setLoginStatus(res?.data?.message);

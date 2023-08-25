@@ -87,7 +87,7 @@ export default function Post() {
     const fetchAllPosts = async () => {
       try {
         const postRes = await axios
-          .get("http://localhost:8000/posts")
+          .get("https://insta-city.onrender.com/posts")
           .then((res) => {
             console.log(res);
             setPosts(res?.data);
@@ -99,7 +99,7 @@ export default function Post() {
 
     const fetchAllUsers = async () => {
       await axios
-        .get("http://localhost:8000/users")
+        .get("https://insta-city.onrender.com/users")
         .then((res) => {
           setUsers(res?.data);
         })
@@ -110,7 +110,7 @@ export default function Post() {
 
     const fetchAllLikes = async () => {
       axios
-        .get("http://localhost:8000/likes")
+        .get("https://insta-city.onrender.com/likes")
         .then((res) => {
           setLikes(res?.data);
         })
@@ -135,22 +135,22 @@ export default function Post() {
           userId === parseInt(uid) && postId === parseInt(pid)
       ).length === 0
     ) {
-      await axios.post("http://localhost:8000/likeclicked", {
+      await axios.post("https://insta-city.onrender.com/likeclicked", {
         userId: parseInt(uid),
         postId: parseInt(pid),
       });
 
       // setLikes(...likes,...[{userId:uid , postId:pid}])
 
-      const res = await axios.get("http://localhost:8000/likes");
+      const res = await axios.get("https://insta-city.onrender.com/likes");
       setLikes(res?.data);
     } else {
-      await axios.post("http://localhost:8000/dislikeclicked", {
+      await axios.post("https://insta-city.onrender.com/dislikeclicked", {
         userId: parseInt(uid),
         postId: parseInt(pid),
       });
 
-      const res = await axios.get("http://localhost:8000/likes");
+      const res = await axios.get("https://insta-city.onrender.com/likes");
       setLikes(res?.data);
     }
   };
@@ -179,8 +179,7 @@ export default function Post() {
 
   return (
     <>
-      {posts
-        ?.slice(0)
+      {posts?.slice(0)
         .reverse()
         .map((post) => {
           // const curDate = new Date();

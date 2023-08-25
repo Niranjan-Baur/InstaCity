@@ -7,10 +7,10 @@ import e from "express";
 // require("dotenv").config()
 
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "niranjan",
-  password: "",
-  database: "insta_db",
+  host: process.env.DB_HOST || "localhost",
+  user: process.env.DB_USERNAME || "niranjan",
+  password: process.env.PASSWORD || "",
+  database: process.env.DB_NAME || "insta_db",
 });
 
 const app = express();

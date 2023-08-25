@@ -15,7 +15,7 @@ const Home = () => {
     } else {
       navigate("/login");
     }
-  }, []);
+  });
 
   return (
     <div className="home">
