@@ -4,7 +4,7 @@ import cors from "cors";
 import 'dotenv/config';
 import e from "express"; 
 
-require("dotenv").config()
+// require("dotenv").config()
 
 const db = mysql.createConnection({
   host: "localhost",
