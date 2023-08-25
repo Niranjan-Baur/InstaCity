@@ -273,7 +273,7 @@ export default function Post() {
                 contentLabel="Example Modal"
               >
                 {/* <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2> */}
-                <img src={postImg[0]?.post_img} />
+                <img src={postImg[0]?.post_img} alt=""/>
                 {/* <div>hello</div> */}
               </Modal>
             </>
