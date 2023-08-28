@@ -33,8 +33,6 @@ const Profile = () => {
 
   console.log(userId);
 
-
-
   useEffect(() => {
     const fetchAllUsers = async () => {
       await axios

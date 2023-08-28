@@ -180,8 +180,8 @@ export default function Post() {
   return (
     <>
       {posts?.slice(0)
-        .reverse()
-        .map((post) => {
+        ?.reverse()
+        ?.map((post) => {
           // const curDate = new Date();
 
           // to find the user who post
