@@ -8,6 +8,7 @@ Here is the link : https://insta-city-clone.netlify.app
 ## How does it work?
 
 After successfully logging in or registering, users can see all posts and they can also create posts and interact with the post.
+Watch the demo for better understanding.
 
 ## Demo
 
