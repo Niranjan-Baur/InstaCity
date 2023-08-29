@@ -7,15 +7,17 @@ import "./Home.css"
 const Home = () => {
   const navigate = useNavigate();
 
+  const x = sessionStorage.getItem("userID");
+
+
   useEffect(() => {
-    const x = sessionStorage.getItem("userID");
 
     if (x) {
       navigate("/");
     } else {
       navigate("/login");
     }
-  });
+  },[x]);
 
   return (
     <div className="home">

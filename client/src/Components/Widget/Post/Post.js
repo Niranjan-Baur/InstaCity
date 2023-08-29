@@ -89,7 +89,7 @@ export default function Post() {
         const postRes = await axios
           .get("https://insta-city.onrender.com/posts")
           .then((res) => {
-            console.log(res);
+            // console.log(res);
             setPosts(res?.data);
           });
       } catch (err) {
@@ -122,7 +122,7 @@ export default function Post() {
     fetchAllPosts();
     fetchAllUsers();
     fetchAllLikes();
-  }, []);
+  },[]);
 
   const likeClicked = async (uid, pid) => {
     // console.log(
