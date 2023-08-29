@@ -29,7 +29,13 @@ const Login = () => {
       .post("https://insta-city.onrender.com/login", user)
       .then((res) => {
         // console.log(res?.data.message);
-        setLoginStatus(res?.data?.message);
+        if(res?.data?.message){
+          setLoginStatus(res?.data?.message);
+        }
+        else{
+          setLoginStatus("Maybe API limit exceeded");
+        }
+        
         console.log(res);
 
         if (res?.data?.data) {
